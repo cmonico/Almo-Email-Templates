@@ -1,16 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 10" description="Module 10 - nobox CALL OUT ROW" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 10 - nobox CALL OUT ROW -->
-  <tr> <!-- Table row -->
-    <td background="http://www.almoproav.net/campaigns/template/2019/assets/noboxContent1.jpg" align="left" valign="top" bgcolor="#3C3C3C" style="padding: 30px 30px 30px 30px; color: #D3D3D3; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: left; background-position: center center !important; background-size: cover !important;"> <!-- Table cell -->
-        <p align="left" style="margin: 0 0 14px 0;">
-          <a href="http://www.almoproav.com/nobox" target="_blank">
-            <img alt="nobox Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/noboxLogo_white.png" width="120" height="42" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
-          </a>
-        </p> <!-- Replace link and replace image and alt tag. -->
-        <h2 style="font-size: 24px; font-weight: 400; margin: 10px 0; color: #ffffff;">Boost Your Revenue in 2019</h2> <!-- Replace h2 here -->
-        <p style="margin: 0;">You can install digital signage, but now your customer wants you to provide content. Instead of turning away an opportunity, you can confidently say, “Yes, I can do that.” Our designers know digital signage inside and out and can create eye-catching, effective and functional solutions.</p> <!-- replace body copy here roughly 46 words -->
-        <p style="margin: 20px 0 0 ;">
-          <a href="http://almoproav.com" target="_blank" style="color: #6abf4b; text-decoration: none;">Learn more &#187;</a>
-        </p> <!-- Replace link and link body copy here -->
-      </td>
-  </tr>
-<!-- END nobox CALL OUT ROW -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

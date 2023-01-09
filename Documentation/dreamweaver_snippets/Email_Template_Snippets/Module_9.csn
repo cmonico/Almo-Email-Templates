@@ -1,10 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 9" description="Module 9 - DARK CALL OUT ROW" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 9 - DARK CALL OUT ROW -->
-  <tr> <!-- Table row -->
-    <td bgcolor="#3C3C3C" align="left" style="padding: 20px 30px 40px 30px; color: #D3D3D3; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" > <!-- Table cell -->
-      <h2 style="font-size: 24px; font-weight: 400; margin: 10px 0;">White Label Experience</h2> <!-- Replace Header Here -->
-      <p style="margin: 0;">Using Ceej with clients? Now you can completely customize their dashboard and experience with our white label service. Take our product and make it their own.</p><p style="margin: 20px 0 0 ;">
-        <a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Experience white label &#187;</a>
-      </p> <!-- Replace body copy roughly 26 words or 3 lines. Replace link and link body copy here as well. -->
-    </td>
-  </tr>
-<!-- END DARK CALL OUT ROW -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

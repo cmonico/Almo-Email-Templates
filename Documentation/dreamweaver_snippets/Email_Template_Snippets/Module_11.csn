@@ -1,26 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 11" description="Module 11 - BDM Segment" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 11 - BDM Segment -->
-  <tr> <!-- Copy Table Row -->
-    <td align="center" valign="top" bgcolor="#ffffff" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: left; background-position: center center !important; background-size: cover !important;">
-      <table align="center"> <!-- Centers Content of BDM Segment -->
-        <tr>
-          <td>
-            <p align="center" style="margin: 0 20px 14px 0;">
-              <a href="mailto:agreene@almo.com" target="_blank">
-                <img alt="Angie Green Headshot" src="http://www.almoproav.net/campaigns/e4/nym19/postshow/avocor/assets/angie_bdm.png" width="120" height="auto" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
-              </a>
-            </p> <!-- Replace image link and image here.  -->
-          </td>
-          <td>
-            <h2 style="font-size: 22px; font-weight: 400; color: #000000; margin: 0;">Angie Green</h2> <!-- Replace header here -->
-            <p style="margin: 2px 0 0 0; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-              <i>Business Development Manager</i><br><br>
-              <strong>Email:</strong> <a href="mailto:agreene@almo.com" target="_blank" style="color: #00A7CF; text-decoration: none;">agreene@almo.com</a><br>
-              <strong>Toll-free:</strong> 888.420.2566 x6209<br>
-              <strong>Fax:</strong> 267.350.0314</p>
-            </p> <!-- Replace link and link copy here-->
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-<!-- End BDM Segment Module -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

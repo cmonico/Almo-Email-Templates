@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module Spacer" description="Email Spacer for use with CTA 2 Round Small Button. Use only if needed. "><insertText location="beforeSelection"><![CDATA[<!-- SPACER -->
-    <tr>
-      <td align="center" valign="top" bgcolor="transparent" style="padding: 30px 30px 30px 30px;"> <!-- Replace elements background here -->
-      </td>
-    </tr>
-<!-- End SPACER -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 3" description="Module 3 - Copy 2" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 3 - COPY-2 -->
-  <tr> <!-- Copy Table Row -->
-    <td bgcolor="#ffffff" align="left" style="padding: 40px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
-      <p style="margin: 0;">Everyone likes a better experience. To make using Ceej easier, more enjoyable, and safer than ever, we've rolled out some changes to your account. Here's what to expect&hellip;</p> <!-- Insert Copy Here for secondary description block. -->
-    </td>
-  </tr>
-<!-- End COPY-2 Module -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

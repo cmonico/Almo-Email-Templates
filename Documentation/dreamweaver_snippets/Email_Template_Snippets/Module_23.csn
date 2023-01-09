@@ -1,13 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 23" description="Module 23 - Webinar Register Button" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 23 - Webinar Register Button -->
-<tr>
-  <td bgcolor="#ffffff" align="center" style="padding: 20px 0 70px 0; border-radius: 0px 0px 4px 4px;">
-    <table border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td align="center" style="border-radius: 10px;" bgcolor="#00A7CF">
-          <a href="http://litmus.com" target="_blank" style="font-size: 18px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 28px; background-color: #00A7CF; padding: 16px 28px; border: 1px solid #00A7CF; display: block;">Register Now &#187;</a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<!-- Module 23 - Webinar Register Button End-->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

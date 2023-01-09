@@ -1,54 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 7" description="Module 7 - 4 Column" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 7 - 4 COLUMN ROW -->
-  <tr align="center"> <!-- Table row. Required extra center tag. -->
-    <td align="center" bgcolor="#ffffff" style="padding: 0 20px 40px 20px;"> <!-- Table cell -->
-      <!--[if (gte mso 9)|(IE)]>
-      <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
-      <tr>
-      <td align="center" valign="top" width="560">
-      <![endif]-->
-        <table align="center" class="container" width="100%" cellpadding="0" cellspacing="0" style="max-width: 560px;"> <!-- Nested table for 4 column row. Specifies a max width of 560 pixels. -->
-          <tr align="center"> <!-- Nested table row -->
-            <!-- TOP ROW -->
-            <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
-              <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
-                <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
-              <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 1</h4> <!-- replace header here -->
-              <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
-              </p> <!-- Replace copy and link here -->
-            </td>
-            <td class="full" valign="top"  style="align: center; padding: 5px;"> <!-- Nested table cell -->
-              <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
-                <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
-              <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 2</h4> <!-- replace header here -->
-              <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
-              </p> <!-- Replace copy and link here -->
-            </td>
-            <!-- BOTTOM ROW -->
-            <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
-              <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
-                <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
-              <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 3</h4> <!-- replace header here -->
-              <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
-              </p> <!-- Replace copy and link here -->
-            </td>
-            <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
-              <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
-                <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
-              <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 4</h4> <!-- replace header here -->
-              <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
-              </p> <!-- Replace copy and link here -->
-            </td>
-          </tr>
-        </table>
-      <!--[if (gte mso 9)|(IE)]>
-      </td>
-      </tr>
-      </table>
-      <![endif]-->
-    </td>
-  </tr>
-<!-- END 4 COLUMN ROW -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

@@ -1,38 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 5 - 2 COLUMN ROW" description="2 Column Row" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 5 - 2 COLUMN ROW -->
-  <tr> <!-- 2 column row Table Row -->
-    <td bgcolor="#ffffff" align="center" valign="top" style="padding: 20px 0px 0px 0px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
-      <!--[if (gte mso 9)|(IE)]>
-      <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
-      <tr>
-      <td align="center" valign="top" width="560">
-      <![endif]-->
-        <table width="100%">
-          <tr>
-            <td width="50%" align="center" class="full-2col">
-              <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
-                <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left Column</h3> <!-- replace header here -->
-              <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                Left Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
-                <br><br>
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
-              </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
-            </td>
-            <td width="50%" align="center" class="full-2col">
-              <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
-                <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Right Column</h3> <!-- replace header here -->
-              <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                Right Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
-                <br><br>
-                <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
-              </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
-            </td>
-          </tr>
-        </table>
-      <!--[if (gte mso 9)|(IE)]>
-      </td>
-      </tr>
-      </table>
-      <![endif]-->
-    </td>
-  </tr>
-<!--END 2 COLUMN ROW -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

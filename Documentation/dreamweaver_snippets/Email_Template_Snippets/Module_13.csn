@@ -1,32 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 13" description="Module 13 - nobox CALLOUT 2" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 13 - nobox CALLOUT 2 - MUST PLACE AFTER END CONTENT BLOCK COMMENT -->
-  <tr align="center"> <!-- Table Row. All content within will be centered -->
-    <td align="center" style="padding: 30px 0px 0px 0px;"> <!-- Table cell. -->
-      <!--[if (gte mso 9)|(IE)]>
-      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
-      <tr>
-      <td align="center" valign="top" width="600">
-      <![endif]-->
-        <table class="out_online" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table. -->
-          <tr> <!-- Nested Table Row -->
-            <td background="http://www.almoproav.net/campaigns/template/2019/assets/noboxInstall1.jpg" align="center" valign="top" bgcolor="#3C3C3C" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #ffffff; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: center; background-position: center center !important; background-size: cover !important;"> <!-- Replace elements background here -->
-              <p align="center" style="margin: 0 0 14px 0;">
-                <a href="http://www.almoproav.com/nobox" target="_blank">
-                  <img alt="nobox Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/noboxLogo_white.png" width="120" height="42" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
-                </a>
-              </p> <!-- Replace image link and image here.  -->
-              <h2 style="font-size: 22px; font-weight: 400; color: #ffffff; margin: 0;">Boost Your Revenue in 2019</h2> <!-- Replace header here -->
-              <p style="margin: 12px 0 0 0; color: #D3D3D3; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> Stand out from your competition and gain new business opportunities by having a nationwide network of skilled laborers on hand to complete any sized project on time and on budget.</p> <!-- Replace body copy here. Roughly 30 words or 3 lines.-->
-              <p style="margin: 20px 0 0 0;">
-                <a href="http://almoproav.com" target="_blank" style="color: #6abf4b; text-decoration: none;">Learn how &#187;</a>
-              </p> <!-- Replace link and link copy here-->
-            </td>
-          </tr>
-        </table>
-      <!--[if (gte mso 9)|(IE)]>
-      </td>
-      </tr>
-      </table>
-      <![endif]-->
-    </td>
-  </tr>
-<!-- END nobox CALLOUT 2 -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

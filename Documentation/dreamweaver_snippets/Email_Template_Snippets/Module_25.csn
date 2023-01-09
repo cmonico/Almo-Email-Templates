@@ -1,64 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 25" description="Module 25 - Upcoming Webinar List Modules" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 25 - Upcoming Webinar List Modules -->
-  <tr> <!-- 2 column row Table Row -->
-    <td align="center" style="padding: 20px 20px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
-      <!--[if (gte mso 9)|(IE)]>
-      <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
-      <tr>
-      <td align="center" valign="top" width="500">
-      <![endif]-->
-        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;"> <!-- Nested table for 2 column row. Specifies a max width of 560 pixels. -->
-          <tr> <!-- nested 2 column row Table Row -->
-            <td bgcolor="#ffffff" align="center" valign="top" style="font-size:0; border-radius: 4px;"> <!-- Nested 2 column row table cell this cell contains content for this block. MSO code below specifies a width of 560 for the row and 260 for the individual cells in outlook. -->
-              <!--[if (gte mso 9)|(IE)]>
-              <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
-              <tr>
-              <td align="left" valign="top" width="125">
-              <![endif]-->
-                <div style="display:inline-block; max-width:25%; min-width: 100px; vertical-align:top;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the first column. -->
-                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
-                    <tr>
-                      <!-- Calender Image -->
-                      <td align="center" cellpadding="10" style="padding: 50px 40px 0px 40px;">
-                        <img src="http://www.almoproav.net/campaigns/template/2019/assets/cal-temp3.png" width="58" height="58" alt="Dec 20th"></img>
-                      </td>
-                      <!-- Calender Image End -->
-                    </tr>
-                  </table>
-                </div>
-              <!--[if (gte mso 9)|(IE)]>
-              </td>
-              <td width="20" style="font-size: 1px;">&nbsp;</td>
-              <td align="right" valign="top" width="375">
-              <![endif]-->
-                <div style="display:inline-block; max-width:75%; min-width: 20px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the second column. -->
-                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500px; float: right;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
-                    <tr>
-                      <!-- Upcoming Webinar Link -->
-                      <td align="left" width="500px" style="padding: 20px 20px;" class="title-mobile-padding">
-                        <a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">
-                          <h2 style="margin: 7px 0px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 400; line-height: 24px;">Measuring up with Labor Services</h2>
-                          <h3 style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 16px;">Join us for an overview of our labor services offerings.</h3>
-                          <p style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17px;"><i>Speakers: First Last of Company Name</i></p>
-                          <p style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17px;">1.5 CTS, CTS-I and CTS-D RU</p>
-                        </a>
-                      </td>
-                      <!-- Upcoming Webinar Link End -->
-                    </tr>
-                  </table>
-                </div>
-              <!--[if (gte mso 9)|(IE)]>
-              </td>
-              </tr>
-              </table>
-              <![endif]-->
-            </td>
-          </tr>
-        </table>
-      <!--[if (gte mso 9)|(IE)]>
-      </td>
-      </tr>
-      </table>
-      <![endif]-->
-    </td>
-  </tr>
-<!-- Module 25 - Upcoming Webinar List Modules End -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

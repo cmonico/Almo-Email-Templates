@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 21" description="Module 21 - Webinar Horizontal Rule " type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 21 - Webinar Horizontal Rule -->
-<tr>
-  <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 20px 30px;"> <!-- Copy Table Cell -->
-    <hr style="width: 300px; border: solid 2px #00A7CF; border-radius: 2px;">
-  </td>
-</tr>
-<!-- Module 21 - Webinar Horizontal Rule End -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

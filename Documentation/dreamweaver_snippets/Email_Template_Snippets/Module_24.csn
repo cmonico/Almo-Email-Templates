@@ -1,17 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 24" description="Module 24 - Upcoming Webinar Module" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 24 - Upcoming Webinar Module -->
-<tr>
-  <td bgcolor="transparent" align="center" style="padding: 30px 30px 8px 30px">  <!-- nested table cell -->
-    <h2 align="left" style="color: #000000; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 27px; font-weight: 400; line-height: 25px;">Upcoming Webinars</h2> <!-- replace header here -->
-  </td>
-</tr>
-
-<tr>
-  <td align="center" bgcolor="#c1dde8" style="padding: 30px 30px 30px 30px; border-radius: 4px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">  <!-- nested table cell -->
-    <table>
-      <!-- Insert Upcoming Webinar List Modules Here -->
-
-      <!-- Insert Upcoming Webinar List Modules Here -->
-    </table>
-  </td>
-</tr>
-<!-- Module 24 - Upcoming Webinar Module End -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

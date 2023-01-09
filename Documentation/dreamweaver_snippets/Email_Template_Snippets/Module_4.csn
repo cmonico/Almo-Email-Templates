@@ -1,14 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 4" description="Module 4 - Copy Heading and Body" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 4 - COPY HEADING & COPY BODY -->
-  <tr>  <!-- Copy Heading Table Row -->
-    <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Heading Table Cell -->
-      <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Brand New Dashboard</h2> <!-- Update table copy heading here. -->
-    </td>
-  </tr>
-
-  <tr> <!-- Copy Table Row -->
-    <td bgcolor="#ffffff" align="left" style="padding: 20px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
-      <p style="margin: 0;">We've completely overhauled the dashboard to make vital stats more readable, users easier to manage, and have given you more control over choosing which data should be shown where.</p> <!-- Insert Copy Here for third description block. -->
-      <p style="margin: 14px 0 10px 0;"><a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Experience the new dashboard &#187;</a></p> <!-- Update link and copy here for third description block. -->
-    </td>
-  </tr>
-<!-- End COPY-4 Module -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>
