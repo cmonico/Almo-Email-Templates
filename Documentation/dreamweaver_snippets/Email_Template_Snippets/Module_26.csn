@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 26" description="Outlined Button Section" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 26 - Outlined Button Section -->
+ <tr> <!-- nested table row 2 -->  <td align="center" style="padding: 25px 0 25px 0;"> <!-- nested table cell that centers the text -->
+   <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #00A7CF; text-decoration: none; background-color: transparent; border: 2px solid #00A7CF; border-bottom: 2px solid #00A7CF; border-left: 2px solid #00A7CF; border-right: 2px solid #00A7CF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+  </td>
+ </tr>
+<!-- Module 26 - Outlined Button Section END -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 16" description="Module 16 - Webinar Title and Time" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 16 - Webinar Title and Time -->
+  <tr>  <!-- Copy Heading Table Row -->
+    <td bgcolor="#ffffff" align="center" style="padding: 40px 70px 0px 70px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 400; line-height: 36px;"> <!-- Copy Heading Table Cell -->
+      <h2 style="font-size: 24px; font-weight: 400; margin: 0;">
+        The Only Unbiased Explanation of AV over IP
+      </h2> <!-- Update table copy heading here. -->
+    </td>
+  </tr>
+
+  <tr> <!-- Copy Table Row -->
+    <td bgcolor="#ffffff" align="center" style="padding: 20px 70px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 400; line-height: 27px;"> <!-- Copy Table Cell -->
+      <p style="margin: 0;">
+        Monday, December 2, 2019 - 2PM EST
+      </p> <!-- Date - Time Time Zone. -->
+      <p style="margin: 0; font-size: 18px;">
+        1.5 CTS, CTS-I and CTS-D
+        <img src="http://www.almoproav.net/campaigns/template/2019/assets/avixa-ru-provider_logo_full_rgb.png" width="50" height="34" style="position: relative; top: 10px;"></img>
+      </p> <!-- CTS Points -->
+    </td>
+  </tr>
+<!-- Module 16 - Webinar Title and Time End -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>
