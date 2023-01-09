@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 15" description="Module 15 - 1 Col Featured Product" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 15 - 1 Col Featured Product -->
+<tr>
+  <td bgcolor="#ffffff" align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+    <img src="https://via.placeholder.com/400x250.png" width="400" height="250" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+
+    <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left Column</h3> <!-- replace header here -->
+    <p align="left" style="margin: 20px 100px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+      Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+      <br><br>
+      <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+    </p>
+    <!-- CTA Button Section -->
+    <table border="0" cellspacing="0" cellpadding="0" class="responsive-table" style="margin: 20px 0px;"> <!-- nested table 2 -->
+     <tr> <!-- nested table row 2 -->
+       <td align="center"> <!-- nested table cell that centers the text -->
+         <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #00A7CF; text-decoration: none; background-color: transparent; border: 2px solid #00A7CF; border-bottom: 2px solid #00A7CF; border-left: 2px solid #00A7CF; border-right: 2px solid #00A7CF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+       </td>
+     </tr>
+    </table>
+    <!-- CTA Button Section END -->
+  </td>
+</tr>
+<!-- Module 15 - 1 Col Featured Product END -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

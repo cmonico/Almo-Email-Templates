@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 2" description="Module 2 - Hero Image" type="block"><insertText location="beforeSelection"><![CDATA[<!-- HERO IMAGE/VIDEO -->
+<tr><!-- HERO IMAGE/VIDEO Table Row -->
+  <td align="left" bgcolor="#ffffff" style="padding: 0px 0px 0px 0px;" class=""><!-- HERO IMAGE/VIDEO Table Cell -->
+    <a href="http://almoproav.com" target="_blank"><!-- Main Link for HERO IMAGE/VIDEO -->
+      <img alt="Hero Image" border="0" src="https://via.placeholder.com/600x300.png" style="display: block; width: 100%; max-width: 100%; min-width: 100px; font-family: 'Raleway', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" width="600"> <!-- Replace HERO IMAGE/VIDEO here and update alt tag. -->
+    </a>
+  </td>
+</tr>
+<!-- End HERO IMAGE/VIDEO -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

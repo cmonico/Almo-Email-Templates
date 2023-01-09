@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 1" description="Module 1 - Copy 1" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 1 - COPY -->
+  <tr> <!-- Copy Table Row -->
+    <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+      <p style="margin: 0;">The latest release of Ceej includes new features and lots of fixes to make your experience better than ever. See what's new below.</p> <!-- Insert Copy Here. This main intro description block should be kept to around 23 words or two lines of text to keep the page looking balanced. -->
+    </td>
+  </tr>
+<!-- End COPY Module -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>

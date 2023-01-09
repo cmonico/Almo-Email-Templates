@@ -1,0 +1,2891 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.text.html.basic':
+  'Template Frame 1':
+    'prefix': 'frame1email'
+    'body': """
+    <!doctype html>
+    <html>
+      <head>
+        <title>Update This Title.</title><!-- Title Tag Must Be Updated For The View Online Version. It can be longer or shorter, but keep in mind that it has to fit within a browser tab box so too long and it will be cut off. -->
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+          /* FONTS */
+          @media screen {
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 900;
+                src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+              }
+
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhmIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhvIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhnIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhoIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhkIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhlIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhrIqOxjaPX.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+
+              @font-face {
+                font-family: 'Yellowtail';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Yellowtail Regular'), local('Yellowtail-Regular'), url(https://fonts.gstatic.com/s/yellowtail/v8/OZpGg_pnoDtINPfRIlLohlvHwWL9f4k.woff2) format('woff2');
+              }
+          }
+
+          /* CLIENT-SPECIFIC STYLES */
+          body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+          table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+          img { -ms-interpolation-mode: bicubic; }
+
+          /* RESET STYLES */
+          img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+          table { border-collapse: collapse !important; }
+          body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+
+          /* Sizes columns for desktop in the 4 column table */
+          .full {
+            display: inline-block;  /* Allows to set a width and height on the element */
+            width: 22%;
+          }
+
+          /* MOBILE STYLES */
+          @media screen and (max-width:600px){ /* Affects classes for screen sizes under 600px */
+              h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+              }
+              .max-width {
+                max-width: 100% !important;
+              }
+
+              .mobile-wrapper {
+                width: 85% !important;
+                max-width: 85% !important;
+              }
+
+              .mobile-padding {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+              }
+
+              /* Sizes columns for mobile in the 4 column table */
+              .full {
+                display: inline-block;
+                width: 45%;
+              }
+          }
+
+          /* ANDROID CENTER FIX */
+          div[style*="margin: 16px 0;"] { margin: 0 !important; }
+        </style>
+      </head>
+
+      <body style="background-color: #f5f5f5; margin: 0 !important; padding: 0 !important;">
+        <!-- Start HIDDEN PREHEADER TEXT -->
+        <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+            Here's a preview of what we have coming up for you. Update This Preheader.<!-- Preheader text must be updated Must Be Updated -->
+        </div>
+        <!-- End HIDDEN PREHEADER TEXT -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- Table Container for entire email -->
+            <!-- LOGO -->
+            <tr> <!-- Table Row Container for Logo Section. A table row and cell is required for content to appear within a table. -->
+              <td bgcolor="#002264" align="center"> <!-- Table Cell Container for Logo Section. Below Microsoft Outlook code sets a specific border, cellspacing, cellpadding, and width for the table, table row, and table header since outlook cannot understand a width percentage or max-width and MSO sees tables differently than other email rendering engines. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for Logo. This is acting like a div which is not supported in email html. -->
+                    <tr> <!-- Nested Table Row for logo -->
+                      <td align="center" valign="top" style="padding: 40px 10px 20px 10px;"> <!-- Nested Table Cell for logo -->
+                        <a href="http://www.almoproav.com" target="_blank"> <!-- Link for logo -->
+                          <img alt="Almo Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/almoLogo_white.png" width="150" height="50" style="display: block; width: 150px; max-width: 150px; min-width: 150px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0"><!-- Logo image tag -->
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END LOGO -->
+
+            <!-- HEADLINE -->
+            <tr> <!-- Table Row Container for Headline Section -->
+              <td bgcolor="#002264" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for Headline Section as well as MSO code. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for headline. Constrains white heading box to a max width of 600 pixels. -->
+                    <tr> <!-- Nested Table Row for headline -->
+                      <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"> <!-- Nested Table Cell for logo. Font family is specified inline. -->
+                        <h1 style="font-size: 48px; font-weight: 400; margin: 0;">Email Temp Frame.</h1> <!-- Header Text Must Be Updated -->
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END HEADLINE -->
+
+            <!-- CONTENT BLOCK -->
+              <tr> <!-- Table Row Container for main content block. -->
+                <td bgcolor="#f5f5f5" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for main content block. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- centers and constrains body to a max width of 600 pixels. -->
+                      <tr> <!-- Copy Table Row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+                          <p style="margin: 0;">The latest release of Ceej includes new features and lots of fixes to make your experience better than ever. See what's new below.</p> <!-- Insert Copy Here. This main intro description block should be kept to around 23 words or two lines of text to keep the page looking balanced. -->
+                        </td>
+                      </tr>
+                      <!-- Insert Modular Content Here -->
+
+
+                      <!-- End Insert Modular Content Here -->
+
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END CONTENT BLOCK -->
+
+            <!-- FOOTER -->
+              <tr> <!-- table row -->
+                <td bgcolor="#f5f5f5" align="center" style="padding: 0px 10px 0px 10px;"> <!-- table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+                      <!-- NAVIGATION -->
+                      <tr> <!-- Nested table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 30px 30px 30px; color: #002664; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- Nested table cell -->
+                          <p style="margin: 0; font-family: 'Yellowtail', Helvetica, Constantina, serif; font-size: 30px; line-height: normal;">Know the Almo Advantage</p>
+                          <p style="font-size: 18px; line-height: 22px;">888.420.2566<br>
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">www.almoproav.com</a>
+                          </p>
+                          <p style="margin: 20px auto;">
+                            <a href="https://www.almoproav.com/brands" target="_blank" style="color: #00A7CF; text-decoration: none;">Lines We Carry</a> |
+                            <a href="https://www.almoproav.com/promotions" target="_blank" style="color: #00A7CF; text-decoration: none;">SPIFFs &amp; Promos</a> |
+                            <a href="https://www.almoproav.com/contactus" target="_blank" style="color: #00A7CF; text-decoration: none;">Contact Us</a>
+                          </p>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0"> <!-- Nested table -->
+                            <tbody> <!-- Table Body -->
+                              <tr> <!-- Nested table row -->
+                                <td align="right"><span class="footer" style="padding: 10px 20px 0 0; font-family: 'Yellowtail', Constantia, serif; font-size: 20px;">Connect with us</span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://blog.almoproav.com/"><img src="http://www.almoproav.net/campaigns/template/2019/assets/blog.png" alt="Blog" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.twitter.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/tw.png" alt="Twitter" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.facebook.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/fb.png" alt="Facebook" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.linkedin.com/company/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/li.png" alt="LinkedIn" border="0"></a></span></td> <!-- Nested table cell -->
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- TERMS and CONDITIONS  -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16px;"> <!-- table cell -->
+                          <p style="margin: 0;"><strong>Terms &amp; Conditions:</strong><br>*Pricing valid while supplies last. Cannot be combined with any other promotions or discounts. Other restrictions may apply.</p>
+                        </td>
+                      </tr>
+                      <!-- UNSUBSCRIBE and VIEW ONLINE. THE VIEW ONLINE BUTTON MUST BE REPLACED ON ALL EMAILS SENT OUT-->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">If this email looks strange, <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">view online</a>.</p> <!-- VIEW ONLINE Link Must Be Updated -->
+                          <p style="margin: 12px 0 0 0;">If you wish to stop receiving emails, <a href="%%unsubscribe%%" target="_blank" style="color: #00A7CF; text-decoration: none;">unsubscribe</a>.</p>
+                        </td>
+                      </tr>
+                      <!-- ADDRESS -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">© Almo Corporation | 2709 Commerce Way Philadelphia, PA 19154</p>
+                        </td>
+                      </tr>
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END FOOTER -->
+        </table>
+      </body>
+    </html>"""
+
+  'Template Frame 2':
+    'prefix': 'frame2email'
+    'body': """
+    <!doctype html>
+    <html>
+      <head>
+        <title>Update This Title.</title><!-- Title Tag Must Be Updated For The View Online Version. It can be longer or shorter, but keep in mind that it has to fit within a browser tab box so too long and it will be cut off. -->
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+          /* FONTS */
+          @media screen {
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 900;
+                src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+              }
+
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhmIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhvIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhnIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhoIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhkIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhlIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhrIqOxjaPX.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+
+              @font-face {
+                font-family: 'Yellowtail';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Yellowtail Regular'), local('Yellowtail-Regular'), url(https://fonts.gstatic.com/s/yellowtail/v8/OZpGg_pnoDtINPfRIlLohlvHwWL9f4k.woff2) format('woff2');
+              }
+          }
+
+          /* CLIENT-SPECIFIC STYLES */
+          body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+          table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+          img { -ms-interpolation-mode: bicubic; }
+
+          /* RESET STYLES */
+          img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+          table { border-collapse: collapse !important; }
+          body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+
+          /* Sizes columns for desktop in the 4 column table */
+          .full {
+            display: inline-block;  /* Allows to set a width and height on the element */
+            width: 22%;
+          }
+
+          /* MOBILE STYLES */
+          @media screen and (max-width:600px){ /* Affects classes for screen sizes under 600px */
+              h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+              }
+              .max-width {
+                max-width: 100% !important;
+              }
+
+              .mobile-wrapper {
+                width: 85% !important;
+                max-width: 85% !important;
+              }
+
+              .mobile-padding {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+              }
+
+              /* Sizes columns for mobile in the 4 column table */
+              .full {
+                display: inline-block;
+                width: 45%;
+              }
+          }
+
+          /* ANDROID CENTER FIX */
+          div[style*="margin: 16px 0;"] { margin: 0 !important; }
+        </style>
+      </head>
+
+      <body style="background-color: #ffffff; margin: 0 !important; padding: 0 !important;">
+        <!-- Start HIDDEN PREHEADER TEXT -->
+        <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+            Here's a preview of what we have coming up for you. Update This Preheader.<!-- Preheader text must be updated Must Be Updated -->
+        </div>
+        <!-- End HIDDEN PREHEADER TEXT -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- Table Container for entire email -->
+            <!-- LOGO -->
+            <tr> <!-- Table Row Container for Logo Section. A table row and cell is required for content to appear within a table. -->
+              <td bgcolor="#ffffff" align="center"> <!-- Table Cell Container for Logo Section. Below Microsoft Outlook code sets a specific border, cellspacing, cellpadding, and width for the table, table row, and table header since outlook cannot understand a width percentage or max-width and MSO sees tables differently than other email rendering engines. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for Logo. This is acting like a div which is not supported in email html. -->
+                    <tr> <!-- Nested Table Row for logo -->
+                      <td align="center" valign="top" style="padding: 40px 10px 20px 10px;"> <!-- Nested Table Cell for logo -->
+                        <a href="http://www.almoproav.com" target="_blank"> <!-- Link for logo -->
+                          <img alt="Almo Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/almoLogo_blue.png" width="150" height="50" style="display: block; width: 150px; max-width: 150px; min-width: 150px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0"><!-- Logo image tag -->
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END LOGO -->
+
+            <!-- HEADLINE -->
+            <tr> <!-- Table Row Container for Headline Section -->
+              <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for Headline Section as well as MSO code. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for headline. Constrains white heading box to a max width of 600 pixels. -->
+                    <tr> <!-- Nested Table Row for headline -->
+                      <td bgcolor="#002264" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"> <!-- Nested Table Cell for logo. Font family is specified inline. -->
+                        <h1 style="font-size: 48px; font-weight: 400; color:#ffffff; margin: 0;">Email Temp Frame.</h1> <!-- Header Text Must Be Updated -->
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END HEADLINE -->
+
+            <!-- CONTENT BLOCK -->
+              <tr> <!-- Table Row Container for main content block. -->
+                <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for main content block. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- centers and constrains body to a max width of 600 pixels. -->
+                      <tr> <!-- Copy Table Row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+                          <p style="margin: 0;">The latest release of Ceej includes new features and lots of fixes to make your experience better than ever. See what's new below.</p> <!-- Insert Copy Here. This main intro description block should be kept to around 23 words or two lines of text to keep the page looking balanced. -->
+                        </td>
+                      </tr>
+                      <!-- Insert Modular Content Here -->
+
+                      <!-- End Insert Modular Content Here -->
+
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END CONTENT BLOCK -->
+
+            <!-- FOOTER -->
+              <tr> <!-- table row -->
+                <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+                      <!-- NAVIGATION -->
+                      <tr> <!-- Nested table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 30px 30px 30px 30px; color: #002664; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- Nested table cell -->
+                          <p style="margin: 0; font-family: 'Yellowtail', Helvetica, Constantina, serif; font-size: 30px; line-height: normal;">Know the Almo Advantage</p>
+                          <p style="font-size: 18px; line-height: 22px;">888.420.2566<br>
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">www.almoproav.com</a>
+                          </p>
+                          <p style="margin: 20px auto;">
+                            <a href="https://www.almoproav.com/brands" target="_blank" style="color: #00A7CF; text-decoration: none;">Lines We Carry</a> |
+                            <a href="https://www.almoproav.com/promotions" target="_blank" style="color: #00A7CF; text-decoration: none;">SPIFFs &amp; Promos</a> |
+                            <a href="https://www.almoproav.com/contactus" target="_blank" style="color: #00A7CF; text-decoration: none;">Contact Us</a>
+                          </p>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0"> <!-- Nested table -->
+                            <tbody> <!-- Table Body -->
+                              <tr> <!-- Nested table row -->
+                                <td align="right"><span class="footer" style="padding: 10px 20px 0 0; font-family: 'Yellowtail', Constantia, serif; font-size: 20px;">Connect with us</span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://blog.almoproav.com/"><img src="http://www.almoproav.net/campaigns/template/2019/assets/blog.png" alt="Blog" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.twitter.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/tw.png" alt="Twitter" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.facebook.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/fb.png" alt="Facebook" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.linkedin.com/company/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/li.png" alt="LinkedIn" border="0"></a></span></td> <!-- Nested table cell -->
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- TERMS and CONDITIONS  -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16px;"> <!-- table cell -->
+                          <p style="margin: 0;"><strong>Terms &amp; Conditions:</strong><br>*Pricing valid while supplies last. Cannot be combined with any other promotions or discounts. Other restrictions may apply.</p>
+                        </td>
+                      </tr>
+                      <!-- UNSUBSCRIBE and VIEW ONLINE. THE VIEW ONLINE BUTTON MUST BE REPLACED ON ALL EMAILS SENT OUT-->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">If this email looks strange, <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">view online</a>.</p> <!-- VIEW ONLINE Link Must Be Updated -->
+                          <p style="margin: 12px 0 0 0;">If you wish to stop receiving emails, <a href="%%unsubscribe%%" target="_blank" style="color: #00A7CF; text-decoration: none;">unsubscribe</a>.</p>
+                        </td>
+                      </tr>
+                      <!-- ADDRESS -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">© Almo Corporation | 2709 Commerce Way Philadelphia, PA 19154</p>
+                        </td>
+                      </tr>
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END FOOTER -->
+        </table>
+      </body>
+    </html>"""
+
+  'Template Frame 3':
+    'prefix': 'frame3email'
+    'body': """
+    <!doctype html>
+    <html>
+      <head>
+        <title>Update This Title.</title><!-- Title Tag Must Be Updated For The View Online Version. It can be longer or shorter, but keep in mind that it has to fit within a browser tab box so too long and it will be cut off. -->
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+          /* FONTS */
+          @media screen {
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 900;
+                src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+              }
+
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhmIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhvIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhnIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhoIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhkIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhlIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhrIqOxjaPX.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+
+              @font-face {
+                font-family: 'Yellowtail';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Yellowtail Regular'), local('Yellowtail-Regular'), url(https://fonts.gstatic.com/s/yellowtail/v8/OZpGg_pnoDtINPfRIlLohlvHwWL9f4k.woff2) format('woff2');
+              }
+          }
+
+          /* CLIENT-SPECIFIC STYLES */
+          body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+          table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+          img { -ms-interpolation-mode: bicubic; }
+
+          /* RESET STYLES */
+          img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+          table { border-collapse: collapse !important; }
+          body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+
+          /* Sizes columns for desktop in the 4 column table */
+          .full {
+            display: inline-block;  /* Allows to set a width and height on the element */
+            width: 22%;
+          }
+
+          /* MOBILE STYLES */
+          @media screen and (max-width:600px){ /* Affects classes for screen sizes under 600px */
+              h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+              }
+              .max-width {
+                max-width: 100% !important;
+              }
+
+              .mobile-wrapper {
+                width: 85% !important;
+                max-width: 85% !important;
+              }
+
+              .mobile-padding {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+              }
+
+              /* Sizes columns for mobile in the 4 column table */
+              .full {
+                display: inline-block;
+                width: 45%;
+              }
+          }
+
+          /* ANDROID CENTER FIX */
+          div[style*="margin: 16px 0;"] { margin: 0 !important; }
+        </style>
+      </head>
+
+      <body style="background-color: #ffffff; margin: 0 !important; padding: 0 !important;">
+        <!-- Start HIDDEN PREHEADER TEXT -->
+        <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+            Here's a preview of what we have coming up for you. Update This Preheader.<!-- Preheader text must be updated Must Be Updated -->
+        </div>
+        <!-- End HIDDEN PREHEADER TEXT -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- Table Container for entire email -->
+            <!-- LOGO -->
+            <tr> <!-- Table Row Container for Logo Section. A table row and cell is required for content to appear within a table. -->
+              <td bgcolor="#ffffff" align="center"> <!-- Table Cell Container for Logo Section. Below Microsoft Outlook code sets a specific border, cellspacing, cellpadding, and width for the table, table row, and table header since outlook cannot understand a width percentage or max-width and MSO sees tables differently than other email rendering engines. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for Logo. This is acting like a div which is not supported in email html. -->
+                    <tr> <!-- Nested Table Row for logo -->
+                      <td align="center" valign="top" style="padding: 40px 10px 20px 10px;"> <!-- Nested Table Cell for logo -->
+                        <a href="http://www.almoproav.com" target="_blank"> <!-- Link for logo -->
+                          <img alt="Almo Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/almoLogo_blue.png" width="150" height="50" style="display: block; width: 150px; max-width: 150px; min-width: 150px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0"><!-- Logo image tag -->
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END LOGO -->
+
+            <!-- HEADLINE -->
+            <tr> <!-- Table Row Container for Headline Section -->
+              <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for Headline Section as well as MSO code. -->
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table container for headline. Constrains white heading box to a max width of 600 pixels. -->
+                    <tr> <!-- Nested Table Row for headline -->
+                      <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"> <!-- Nested Table Cell for logo. Font family is specified inline. -->
+                        <h1 style="font-size: 48px; font-weight: 400; color:#000000; margin: 0;">Email Temp Frame.</h1> <!-- Header Text Must Be Updated -->
+                      </td>
+                    </tr>
+                  </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <!-- END HEADLINE -->
+
+            <!-- CONTENT BLOCK -->
+              <tr> <!-- Table Row Container for main content block. -->
+                <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for main content block. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- centers and constrains body to a max width of 600 pixels. -->
+                      <tr> <!-- Copy Table Row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+                          <p style="margin: 0;">The latest release of Ceej includes new features and lots of fixes to make your experience better than ever. See what's new below.</p> <!-- Insert Copy Here. This main intro description block should be kept to around 23 words or two lines of text to keep the page looking balanced. -->
+                        </td>
+                      </tr>
+                      <!-- Insert Modular Content Here -->
+
+                      <!-- End Insert Modular Content Here -->
+
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END CONTENT BLOCK -->
+
+            <!-- FOOTER -->
+              <tr> <!-- table row -->
+                <td bgcolor="#ffffff" align="center" style="padding: 0px 10px 0px 10px;"> <!-- table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+                      <!-- NAVIGATION -->
+                      <tr> <!-- Nested table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 30px 30px 30px 30px; color: #002664; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- Nested table cell -->
+                          <p style="margin: 0; font-family: 'Yellowtail', Helvetica, Constantina, serif; font-size: 30px; line-height: normal;">Know the Almo Advantage</p>
+                          <p style="font-size: 18px; line-height: 22px;">888.420.2566<br>
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">www.almoproav.com</a>
+                          </p>
+                          <p style="margin: 20px auto;">
+                            <a href="https://www.almoproav.com/brands" target="_blank" style="color: #00A7CF; text-decoration: none;">Lines We Carry</a> |
+                            <a href="https://www.almoproav.com/promotions" target="_blank" style="color: #00A7CF; text-decoration: none;">SPIFFs &amp; Promos</a> |
+                            <a href="https://www.almoproav.com/contactus" target="_blank" style="color: #00A7CF; text-decoration: none;">Contact Us</a>
+                          </p>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0"> <!-- Nested table -->
+                            <tbody> <!-- Table Body -->
+                              <tr> <!-- Nested table row -->
+                                <td align="right"><span class="footer" style="padding: 10px 20px 0 0; font-family: 'Yellowtail', Constantia, serif; font-size: 20px;">Connect with us</span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://blog.almoproav.com/"><img src="http://www.almoproav.net/campaigns/template/2019/assets/blog.png" alt="Blog" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.twitter.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/tw.png" alt="Twitter" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.facebook.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/fb.png" alt="Facebook" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.linkedin.com/company/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/li.png" alt="LinkedIn" border="0"></a></span></td> <!-- Nested table cell -->
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- TERMS and CONDITIONS  -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16px;"> <!-- table cell -->
+                          <p style="margin: 0;"><strong>Terms &amp; Conditions:</strong><br>*Pricing valid while supplies last. Cannot be combined with any other promotions or discounts. Other restrictions may apply.</p>
+                        </td>
+                      </tr>
+                      <!-- UNSUBSCRIBE and VIEW ONLINE. THE VIEW ONLINE BUTTON MUST BE REPLACED ON ALL EMAILS SENT OUT-->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">If this email looks strange, <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">view online</a>.</p> <!-- VIEW ONLINE Link Must Be Updated -->
+                          <p style="margin: 12px 0 0 0;">If you wish to stop receiving emails, <a href="%%unsubscribe%%" target="_blank" style="color: #00A7CF; text-decoration: none;">unsubscribe</a>.</p>
+                        </td>
+                      </tr>
+                      <!-- ADDRESS -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">© Almo Corporation | 2709 Commerce Way Philadelphia, PA 19154</p>
+                        </td>
+                      </tr>
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END FOOTER -->
+        </table>
+      </body>
+    </html>"""
+
+  'Webinar Template Frame 4':
+    'prefix': 'frame4email'
+    'body': """
+    <!doctype html>
+    <html>
+      <head>
+        <title>Webinar Title.</title><!-- Title Tag Must Be Updated For The View Online Version. It can be longer or shorter, but keep in mind that it has to fit within a browser tab box so too long and it will be cut off. -->
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+          /* FONTS */
+          @media screen {
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+              }
+              @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 900;
+                src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+              }
+
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhmIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhvIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhnIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhoIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhkIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhlIqOxjaPXZSk.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhrIqOxjaPX.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+              /* cyrillic-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+              }
+              /* cyrillic */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+              }
+              /* greek-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+              }
+              /* greek */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0370-03FF;
+              }
+              /* vietnamese */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+              }
+              /* latin-ext */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+              }
+              /* latin */
+              @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+
+              @font-face {
+                font-family: 'Yellowtail';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Yellowtail Regular'), local('Yellowtail-Regular'), url(https://fonts.gstatic.com/s/yellowtail/v8/OZpGg_pnoDtINPfRIlLohlvHwWL9f4k.woff2) format('woff2');
+              }
+          }
+
+          /* CLIENT-SPECIFIC STYLES */
+          body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+          table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+          img { -ms-interpolation-mode: bicubic; }
+
+          /* RESET STYLES */
+          img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+          table { border-collapse: collapse !important; }
+          body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+
+          /* Sizes columns for desktop in the 4 column table */
+          .full {
+            display: inline-block;  /* Allows to set a width and height on the element */
+            width: 22%;
+          }
+
+          /* MOBILE STYLES */
+          @media screen and (max-width:600px){ /* Affects classes for screen sizes under 600px */
+              h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+              }
+              .max-width {
+                max-width: 100% !important;
+              }
+
+              .mobile-wrapper {
+                width: 85% !important;
+                max-width: 85% !important;
+              }
+
+              .title-mobile-padding{
+                padding: 20px 50px;
+              }
+
+              .mobile-padding {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+              }
+
+              /* Sizes columns for mobile in the 4 column table */
+              .full {
+                display: inline-block;
+                width: 45%;
+              }
+          }
+
+          /* ANDROID CENTER FIX */
+          div[style*="margin: 16px 0;"] { margin: 0 !important; }
+        </style>
+      </head>
+
+      <body style="background-color: #f5f5f5; margin: 0 !important; padding: 0 !important;">
+        <!-- Start HIDDEN PREHEADER TEXT -->
+        <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+            Here's a preview of this webinar email.<!-- Preheader text must be updated Must Be Updated -->
+        </div>
+        <!-- End HIDDEN PREHEADER TEXT -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- Table Container for entire email -->
+          <tr>
+            <td background="http://www.almoproav.net/campaigns/template/2019/assets/webinar_header_image-full-small.png" bgcolor="002264">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- Table Container for entire email -->
+              <!-- LOGO -->
+                <tr>
+                  <td align="center" valign="top" style="padding: 40px 10px 20px 10px;">
+                    <a href="http://www.almoproav.com" target="_blank"> <!-- Link for logo -->
+                      <img alt="Almo Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/almoLogo_white.png" width="150" height="50" style="display: block; width: 150px; max-width: 150px; min-width: 150px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0"><!-- Logo image tag -->
+                    </a>
+                  </td>
+                </tr>
+              <!-- END LOGO -->
+
+                <!-- HEADLINE -->
+                <tr> <!-- Table Row Container for Headline Section -->
+                  <td align="center" valign="top" style="background-size: 100%; background-position: center; padding: 20px 20px 40px 20px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"> <!-- Nested Table Cell for logo. Font family is specified inline. -->
+                    <h1 style="font-size: 48px; font-weight: 400; color: #ffffff; margin: 0;">Webinars</h1> <!-- Header Text Must Be Updated -->
+                  </td>
+                </tr>
+                <!-- END HEADLINE -->
+              </table>
+            </td>
+          </tr>
+            <!-- CONTENT BLOCK -->
+              <tr> <!-- Table Row Container for main content block. -->
+                <td bgcolor="#f5f5f5" align="center" style="padding: 0px 10px 0px 10px;"> <!-- Table Cell Container for main content block. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- centers and constrains body to a max width of 600 pixels. -->
+                      <!-- Insert Modular Content Here -->
+
+                      <!-- End Insert Modular Content Here End -->
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END CONTENT BLOCK -->
+
+            <!-- FOOTER -->
+              <tr> <!-- table row -->
+                <td bgcolor="#f5f5f5" align="center" style="padding: 0px 10px 0px 10px;"> <!-- table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                  <tr>
+                  <td align="center" valign="top" width="600">
+                  <![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+                      <!-- NAVIGATION -->
+                      <tr> <!-- Nested table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 30px 30px 30px; color: #002664; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- Nested table cell -->
+                          <p style="margin: 0; font-family: 'Yellowtail', Helvetica, Constantina, serif; font-size: 30px; line-height: normal;">Know the Almo Advantage</p>
+                          <p style="font-size: 18px; line-height: 22px;">888.420.2566<br>
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">www.almoproav.com</a>
+                          </p>
+                          <p style="margin: 20px auto;">
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Lines We Carry</a> |
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">SPIFFs &amp; Promos</a> |
+                            <a href="http://www.almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Contact Us</a>
+                          </p>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0"> <!-- Nested table -->
+                            <tbody> <!-- Table Body -->
+                              <tr> <!-- Nested table row -->
+                                <td align="right"><span class="footer" style="padding: 10px 20px 0 0; font-family: 'Yellowtail', Constantia, serif; font-size: 20px;">Connect with us</span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://blog.almoproav.com/"><img src="http://www.almoproav.net/campaigns/template/2019/assets/blog.png" alt="Blog" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.twitter.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/tw.png" alt="Twitter" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.facebook.com/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/fb.png" alt="Facebook" border="0"></a></span></td> <!-- Nested table cell -->
+                                <td><span class="menu-item float-center"><a href="http://www.linkedin.com/company/almoproav"><img src="http://www.almoproav.net/campaigns/template/2019/assets/li.png" alt="LinkedIn" border="0"></a></span></td> <!-- Nested table cell -->
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- TERMS and CONDITIONS  -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16px;"> <!-- table cell -->
+                          <p style="margin: 0;"><strong>Terms &amp; Conditions:</strong><br>*Pricing valid while supplies last. Cannot be combined with any other promotions or discounts. Other restrictions may apply.</p>
+                        </td>
+                      </tr>
+                      <!-- UNSUBSCRIBE and VIEW ONLINE. THE VIEW ONLINE BUTTON MUST BE REPLACED ON ALL EMAILS SENT OUT-->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">If this email looks strange, <a href="http://www.almoproav.net/campaigns/template/2019/frame_template_webinar_9.html" target="_blank" style="color: #00A7CF; text-decoration: none;">view online</a>.</p> <!-- VIEW ONLINE Link Must Be Updated -->
+                          <p style="margin: 12px 0 0 0;">If you wish to stop receiving emails, <a href="%%unsubscribe%%" target="_blank" style="color: #00A7CF; text-decoration: none;">unsubscribe</a>.</p>
+                        </td>
+                      </tr>
+                      <!-- ADDRESS -->
+                      <tr> <!-- table row -->
+                        <td bgcolor="#f5f5f5" align="center" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 18px;"> <!-- table cell -->
+                          <p style="margin: 0;">© Almo Corporation | 2709 Commerce Way Philadelphia, PA 19154</p>
+                        </td>
+                      </tr>
+                    </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            <!-- END FOOTER -->
+        </table>
+      </body>
+    </html>"""
+
+  'Module 1 - Copy 1':
+    'prefix': 'module1email'
+    'body': """
+    <!-- Module 1 - COPY -->
+      <tr> <!-- Copy Table Row -->
+        <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+          <p style="margin: 0;">The latest release of Ceej includes new features and lots of fixes to make your experience better than ever. See what's new below.</p> <!-- Insert Copy Here. This main intro description block should be kept to around 23 words or two lines of text to keep the page looking balanced. -->
+        </td>
+      </tr>
+    <!-- End COPY Module -->"""
+
+  'Module 2 - Hero Image':
+    'prefix': 'module2email'
+    'body': """
+    <!-- HERO IMAGE/VIDEO -->
+    <tr><!-- HERO IMAGE/VIDEO Table Row -->
+      <td align="left" bgcolor="#ffffff" style="padding: 0px 0px 0px 0px;" class=""><!-- HERO IMAGE/VIDEO Table Cell -->
+        <a href="http://almoproav.com" target="_blank"><!-- Main Link for HERO IMAGE/VIDEO -->
+          <img alt="Hero Image" border="0" src="https://via.placeholder.com/600x300.png" style="display: block; width: 100%; max-width: 100%; min-width: 100px; font-family: 'Raleway', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" width="600"> <!-- Replace HERO IMAGE/VIDEO here and update alt tag. -->
+        </a>
+      </td>
+    </tr>
+    <!-- End HERO IMAGE/VIDEO -->"""
+
+  'Module 3 - Copy 2':
+    'prefix': 'module3email'
+    'body': """
+    <!-- Module 3 - COPY-2 -->
+      <tr> <!-- Copy Table Row -->
+        <td bgcolor="#ffffff" align="left" style="padding: 40px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+          <p style="margin: 0;">Everyone likes a better experience. To make using Ceej easier, more enjoyable, and safer than ever, we've rolled out some changes to your account. Here's what to expect&hellip;</p> <!-- Insert Copy Here for secondary description block. -->
+        </td>
+      </tr>
+    <!-- End COPY-2 Module -->"""
+
+  'Module 4 - Copy Heading and Body':
+    'prefix': 'module4email'
+    'body': """
+    <!-- Module 4 - COPY HEADING & COPY BODY -->
+      <tr>  <!-- Copy Heading Table Row -->
+        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Heading Table Cell -->
+          <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Brand New Dashboard</h2> <!-- Update table copy heading here. -->
+        </td>
+      </tr>
+
+      <tr> <!-- Copy Table Row -->
+        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+          <p style="margin: 0;">We've completely overhauled the dashboard to make vital stats more readable, users easier to manage, and have given you more control over choosing which data should be shown where.</p> <!-- Insert Copy Here for third description block. -->
+          <p style="margin: 14px 0 10px 0;"><a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Experience the new dashboard &#187;</a></p> <!-- Update link and copy here for third description block. -->
+        </td>
+      </tr>
+    <!-- End COPY-4 Module -->"""
+
+  'Module 5 - 2 Column':
+    'prefix': 'module5email'
+    'body': """
+    <!-- Module 5 - 2 COLUMN ROW -->
+      <tr> <!-- 2 column row Table Row -->
+        <td bgcolor="#ffffff" align="center" valign="top" style="padding: 20px 0px 0px 0px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table width="100%">
+              <tr>
+                <td width="50%" align="center" class="full-2col">
+                  <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+                    <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left Column</h3> <!-- replace header here -->
+                  <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                    Left Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                    <br><br>
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                  </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
+                </td>
+                <td width="50%" align="center" class="full-2col">
+                  <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+                    <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Right Column</h3> <!-- replace header here -->
+                  <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                    Right Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                    <br><br>
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                  </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!--END 2 COLUMN ROW -->"""
+
+  'Module 6 - 3 Column':
+    'prefix': 'module6email'
+    'body': """
+    <!-- Module 6 - 3 COLUMN ROW -->
+      <tr> <!-- Table row -->
+        <td align="center" bgcolor="#ffffff" style="padding: 0 20px 40px 20px;"> <!-- Table cell -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;"> <!-- Nested table for 3 column row. Specifies a max width of 560 pixels. -->
+              <tr> <!-- Nested table row -->
+                <td align="center" valign="top" style="font-size:0;"> <!-- Nested table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+                  <tr>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:33.3333%; min-width:170px; vertical-align:top; width:100%; margin: 0;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the First column. -->
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:170px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="https://via.placeholder.com/170x110.png" width="170" height="110" border="0" style="display: block;" alt="Insert alt text here"> <!-- replace image and alt tag here -->
+                            <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left</h3> <!-- replace header here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                              <br><br>
+                              <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="15" style="font-size: 1px;">&nbsp;</td>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:33.3333%; min-width:170px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the Second column. -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:173px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="https://via.placeholder.com/170x110.png" width="170" height="110" border="0" style="display: block;" alt="Insert alt text here"> <!-- replace image and alt tag here -->
+                            <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Center</h3> <!-- replace header here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                              <br><br>
+                              <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="15" style="font-size: 1px;">&nbsp;</td>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:33.3333%; min-width:170px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the Third column. -->
+                      <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:170px; float: right;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="https://via.placeholder.com/170x110.png" width="170" height="110" border="0" style="display: block;" alt="Insert alt text here"> <!-- replace image and alt tag here -->
+                              <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Right</h3> <!-- replace header here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                              <br><br>
+                              <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END 3 COLUMN ROW -->"""
+
+  'Module 7 - 4 Column':
+    'prefix': 'module7email'
+    'body': """
+    <!-- Module 7 - 4 COLUMN ROW -->
+      <tr align="center"> <!-- Table row. Required extra center tag. -->
+        <td align="center" bgcolor="#ffffff" style="padding: 0 20px 40px 20px;"> <!-- Table cell -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table align="center" class="container" width="100%" cellpadding="0" cellspacing="0" style="max-width: 560px;"> <!-- Nested table for 4 column row. Specifies a max width of 560 pixels. -->
+              <tr align="center"> <!-- Nested table row -->
+                <!-- TOP ROW -->
+                <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
+                  <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
+                    <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
+                  <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 1</h4> <!-- replace header here -->
+                  <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
+                  </p> <!-- Replace copy and link here -->
+                </td>
+                <td class="full" valign="top"  style="align: center; padding: 5px;"> <!-- Nested table cell -->
+                  <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
+                    <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
+                  <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 2</h4> <!-- replace header here -->
+                  <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
+                  </p> <!-- Replace copy and link here -->
+                </td>
+                <!-- BOTTOM ROW -->
+                <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
+                  <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
+                    <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
+                  <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 3</h4> <!-- replace header here -->
+                  <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
+                  </p> <!-- Replace copy and link here -->
+                </td>
+                <td class="full" valign="top" style="align: center; padding: 5px;"> <!-- Nested table cell -->
+                  <a href="http://almoproav.com" target="_blank"> <!-- Replace link here -->
+                    <img src="https://via.placeholder.com/120x75.png" width="120" height="75" border="0" style="display: block;" alt="Place Alt Text Here"></a> <!-- replace image and alt tag here -->
+                  <h4 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;">Product 4</h4> <!-- replace header here -->
+                  <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Details &#187;</a>
+                  </p> <!-- Replace copy and link here -->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END 4 COLUMN ROW -->"""
+
+  'Email Spacer':
+    'prefix': 'spaceremail'
+    'body': """
+    <!-- SPACER -->
+    <tr>
+      <td align="center" valign="top" bgcolor="transparent" style="padding: 30px 30px 30px 30px;"> <!-- Replace elements background here -->
+      </td>
+    </tr>
+    <!-- End SPACER -->"""
+
+  'Module 8 - CTA 2 ROUND SMALL BUTTON':
+    'prefix': 'module8email'
+    'body': """
+    <!-- CTA ROUND SMALL BUTTON 2 -->
+    <tr>
+      <td align="center" style="padding: 25px 0 25px 0;">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" style="border-radius: 10px;" bgcolor="#00A7CF">
+              <a href="http://litmus.com" target="_blank" style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 28px; background-color: #00A7CF; padding: 16px 28px; border: 1px solid #00A7CF; display: block;">Want to learn more? &#187;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- CTA ROUND SMALL BUTTON 2 -->"""
+
+  'Module 9 - DARK CALL OUT ROW':
+    'prefix': 'module9email'
+    'body': """
+    <!-- Module 9 - DARK CALL OUT ROW -->
+      <tr> <!-- Table row -->
+        <td bgcolor="#3C3C3C" align="left" style="padding: 20px 30px 40px 30px; color: #D3D3D3; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" > <!-- Table cell -->
+          <h2 style="font-size: 24px; font-weight: 400; margin: 10px 0;">White Label Experience</h2> <!-- Replace Header Here -->
+          <p style="margin: 0;">Using Ceej with clients? Now you can completely customize their dashboard and experience with our white label service. Take our product and make it their own.</p><p style="margin: 20px 0 0 ;">
+            <a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Experience white label &#187;</a>
+          </p> <!-- Replace body copy roughly 26 words or 3 lines. Replace link and link body copy here as well. -->
+        </td>
+      </tr>
+    <!-- END DARK CALL OUT ROW -->"""
+
+  'Module 10 - nobox CALL OUT ROW':
+    'prefix': 'module10email'
+    'body': """
+    <!-- Module 10 - nobox CALL OUT ROW -->
+      <tr> <!-- Table row -->
+        <td background="http://www.almoproav.net/campaigns/template/2019/assets/noboxContent1.jpg" align="left" valign="top" bgcolor="#3C3C3C" style="padding: 30px 30px 30px 30px; color: #D3D3D3; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: left; background-position: center center !important; background-size: cover !important;"> <!-- Table cell -->
+            <p align="left" style="margin: 0 0 14px 0;">
+              <a href="http://www.almoproav.com/nobox" target="_blank">
+                <img alt="nobox Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/noboxLogo_white.png" width="120" height="42" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
+              </a>
+            </p> <!-- Replace link and replace image and alt tag. -->
+            <h2 style="font-size: 24px; font-weight: 400; margin: 10px 0; color: #ffffff;">Boost Your Revenue in 2019</h2> <!-- Replace h2 here -->
+            <p style="margin: 0;">You can install digital signage, but now your customer wants you to provide content. Instead of turning away an opportunity, you can confidently say, “Yes, I can do that.” Our designers know digital signage inside and out and can create eye-catching, effective and functional solutions.</p> <!-- replace body copy here roughly 46 words -->
+            <p style="margin: 20px 0 0 ;">
+              <a href="http://almoproav.com" target="_blank" style="color: #6abf4b; text-decoration: none;">Learn more &#187;</a>
+            </p> <!-- Replace link and link body copy here -->
+          </td>
+      </tr>
+    <!-- END nobox CALL OUT ROW -->"""
+
+  'Module 11 - BDM Segment':
+    'prefix': 'module11email'
+    'body': """
+    <!-- Module 11 - BDM Segment -->
+      <tr> <!-- Copy Table Row -->
+        <td align="center" valign="top" bgcolor="#ffffff" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: left; background-position: center center !important; background-size: cover !important;">
+          <table align="center"> <!-- Centers Content of BDM Segment -->
+            <tr>
+              <td>
+                <p align="center" style="margin: 0 20px 14px 0;">
+                  <a href="mailto:agreene@almo.com" target="_blank">
+                    <img alt="Angie Green Headshot" src="http://www.almoproav.net/campaigns/e4/nym19/postshow/avocor/assets/angie_bdm.png" width="120" height="auto" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
+                  </a>
+                </p> <!-- Replace image link and image here.  -->
+              </td>
+              <td>
+                <h2 style="font-size: 22px; font-weight: 400; color: #000000; margin: 0;">Angie Green</h2> <!-- Replace header here -->
+                <p style="margin: 2px 0 0 0; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                  <i>Business Development Manager</i><br><br>
+                  <strong>Email:</strong> <a href="mailto:agreene@almo.com" target="_blank" style="color: #00A7CF; text-decoration: none;">agreene@almo.com</a><br>
+                  <strong>Toll-free:</strong> 888.420.2566 x6209<br>
+                  <strong>Fax:</strong> 267.350.0314</p>
+                </p> <!-- Replace link and link copy here-->
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    <!-- End BDM Segment Module -->"""
+
+  'Module 12 - CALL TO ACTION':
+    'prefix': 'module12email'
+    'body': """
+    <!-- Module 12 - CALL TO ACTION - MUST PLACE AFTER END CONTENT BLOCK COMMENT -->
+      <tr> <!-- Table Row. This call to action must be placed after the main content block. When placed inside it will cause all items above it to be pushed off center in some email rendering programs such as outlook. -->
+        <td align="center" style="padding: 0px 10px 0px 10px; background-color: #f5f5f5;"> <!-- Table cell -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+          <td align="center" valign="top" width="600">
+          <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+              <tr> <!-- nested table row -->
+                <td bgcolor="#00A7CF" align="center" style="padding: 30px 30px 30px 30px; border-radius: 0px 0px 4px 4px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">  <!-- nested table cell -->
+                  <h2 style="font-size: 22px; font-weight: 400; color: #ffffff; margin: 0 0 20px 0;">Want to learn more?</h2> <!-- replace header here -->
+                   <table border="0" cellspacing="0" cellpadding="0" class="responsive-table"> <!-- nested table 2 -->
+                    <tr> <!-- nested table row 2 -->
+                      <td align="center"> <!-- nested table cell that centers the text -->
+                        <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #00A7CF; border: 2px solid #ffffff; border-bottom: 2px solid #ffffff; border-left: 2px solid #ffffff; border-right: 2px solid #ffffff; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+                        <!-- Replace link button copy and link here. -->
+                      </td>
+                    </tr>
+                   </table>
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END CALL TO ACTION -->"""
+
+  'Module 13 - nobox CALLOUT 2':
+    'prefix': 'module13email'
+    'body': """
+    <!-- Module 13 - nobox CALLOUT 2 - MUST PLACE AFTER END CONTENT BLOCK COMMENT -->
+      <tr align="center"> <!-- Table Row. All content within will be centered -->
+        <td align="center" style="padding: 30px 0px 0px 0px;"> <!-- Table cell. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+          <td align="center" valign="top" width="600">
+          <![endif]-->
+            <table class="out_online" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table. -->
+              <tr> <!-- Nested Table Row -->
+                <td background="http://www.almoproav.net/campaigns/template/2019/assets/noboxInstall1.jpg" align="center" valign="top" bgcolor="#3C3C3C" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #ffffff; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: center; background-position: center center !important; background-size: cover !important;"> <!-- Replace elements background here -->
+                  <p align="center" style="margin: 0 0 14px 0;">
+                    <a href="http://www.almoproav.com/nobox" target="_blank">
+                      <img alt="nobox Logo" src="http://www.almoproav.net/campaigns/template/2019/assets/noboxLogo_white.png" width="120" height="42" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
+                    </a>
+                  </p> <!-- Replace image link and image here.  -->
+                  <h2 style="font-size: 22px; font-weight: 400; color: #ffffff; margin: 0;">Boost Your Revenue in 2019</h2> <!-- Replace header here -->
+                  <p style="margin: 12px 0 0 0; color: #D3D3D3; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> Stand out from your competition and gain new business opportunities by having a nationwide network of skilled laborers on hand to complete any sized project on time and on budget.</p> <!-- Replace body copy here. Roughly 30 words or 3 lines.-->
+                  <p style="margin: 20px 0 0 0;">
+                    <a href="http://almoproav.com" target="_blank" style="color: #6abf4b; text-decoration: none;">Learn how &#187;</a>
+                  </p> <!-- Replace link and link copy here-->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END nobox CALLOUT 2 -->"""
+
+  'Module 14 - flt BDM Segment':
+    'prefix': 'module14email'
+    'body': """
+    <!-- Module 14 - FLOATING BDM Segment - MUST PLACE AFTER END CONTENT BLOCK COMMENT -->
+      <tr align="center"> <!-- Table Row. All content within will be centered -->
+        <td align="center" style="padding: 30px 0px 0px 0px;"> <!-- Table cell. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+          <td align="center" valign="top" width="600">
+          <![endif]-->
+            <table class="out_online" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- Nested Table. -->
+              <tr> <!-- Nested Table Row -->
+                <td align="center" valign="top" bgcolor="#ffffff" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; text-align: left; background-position: center center !important; background-size: cover !important;">
+                  <table align="center"> <!-- Centers Content of BDM Segment -->
+                    <tr>
+                      <td>
+                        <p align="center" style="margin: 0 20px 14px 0;">
+                          <a href="mailto:agreene@almo.com" target="_blank">
+                            <img alt="Angie Green Headshot" src="http://www.almoproav.net/campaigns/e4/nym19/postshow/avocor/assets/angie_bdm.png" width="120" height="auto" style="display: block; width: 150px; max-width: 120px; min-width: 120px;" border="0">
+                          </a>
+                        </p> <!-- Replace image link and image here.  -->
+                      </td>
+                      <td>
+                        <h2 style="font-size: 22px; font-weight: 400; color: #000000; margin: 0;">Angie Green </h2> <!-- Replace header here -->
+                        <p style="margin: 2px 0 0 0; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                          <i>Business Development Manager</i><br><br>
+                          <strong>Email:</strong>
+                          <a href="mailto:agreene@almo.com" target="_blank" style="color: #00A7CF; text-decoration: none;">agreene@almo.com</a>
+                          <br>
+                          <strong>Toll-free:</strong> 888.420.2566 x6209
+                          <br>
+                          <strong>Fax:</strong> 267.350.0314
+                        </p> <!-- Replace link and link copy here-->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END FLOATING BDM Segment -->"""
+
+  'Module 15 - 1 Col Featured Product':
+    'prefix': 'module15email'
+    'body': """
+    <!-- Module 15 - 1 Col Featured Product -->
+    <tr>
+      <td bgcolor="#ffffff" align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+        <img src="https://via.placeholder.com/400x250.png" width="400" height="250" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+
+        <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left Column</h3> <!-- replace header here -->
+        <p align="left" style="margin: 20px 100px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+          Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+          <br><br>
+          <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+        </p>
+        <!-- CTA Button Section -->
+        <table border="0" cellspacing="0" cellpadding="0" class="responsive-table" style="margin: 20px 0px;"> <!-- nested table 2 -->
+         <tr> <!-- nested table row 2 -->
+           <td align="center"> <!-- nested table cell that centers the text -->
+             <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #00A7CF; text-decoration: none; background-color: transparent; border: 2px solid #00A7CF; border-bottom: 2px solid #00A7CF; border-left: 2px solid #00A7CF; border-right: 2px solid #00A7CF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+           </td>
+         </tr>
+        </table>
+        <!-- CTA Button Section END -->
+      </td>
+    </tr>
+    <!-- Module 15 - 1 Col Featured Product END -->"""
+
+  'Module 16 - Webinar Title and Time':
+    'prefix': 'module16email'
+    'body': """
+    <!-- Module 16 - Webinar Title and Time -->
+      <tr>  <!-- Copy Heading Table Row -->
+        <td bgcolor="#ffffff" align="center" style="padding: 40px 70px 0px 70px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 400; line-height: 36px;"> <!-- Copy Heading Table Cell -->
+          <h2 style="font-size: 24px; font-weight: 400; margin: 0;">
+            The Only Unbiased Explanation of AV over IP
+          </h2> <!-- Update table copy heading here. -->
+        </td>
+      </tr>
+
+      <tr> <!-- Copy Table Row -->
+        <td bgcolor="#ffffff" align="center" style="padding: 20px 70px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 400; line-height: 27px;"> <!-- Copy Table Cell -->
+          <p style="margin: 0;">
+            Monday, December 2, 2019 - 2PM EST
+          </p> <!-- Date - Time Time Zone. -->
+          <p style="margin: 0; font-size: 18px;">
+            1.5 CTS, CTS-I and CTS-D
+            <img src="http://www.almoproav.net/campaigns/template/2019/assets/avixa-ru-provider_logo_full_rgb.png" width="50" height="34" style="position: relative; top: 10px;"></img>
+          </p> <!-- CTS Points -->
+        </td>
+      </tr>
+    <!-- Module 16 - Webinar Title and Time End -->"""
+
+  'Module 17 - Sponsored By':
+    'prefix': 'module17email'
+    'body': """
+    <!-- Module 17 - Sponsored By -->
+    <tr>
+      <td bgcolor="#ffffff" align="center" style="padding: 0 0 20px 0;">
+        <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+          <strong>Sponsored By:</strong>
+        </p>
+        <img src="http://www.almoproav.net/campaigns/template/2019/assets/sponsor_placeholder.png" width="200" height="66"></img>
+      </td>
+    </tr>
+    <!-- Module 17 - Sponsored By End -->"""
+
+  'Module 18 - 1 Col Speaker':
+    'prefix': 'module18email'
+    'body': """
+    <!-- Module 18 - 1 Col Speaker -->
+    <tr>
+      <td bgcolor="#ffffff" align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+        <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-190.png" width="190" height="190" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+        <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+          <strong>First Last</strong><br>
+          Company<br>
+          <i>Position</i>
+          <br><br>
+        </p>
+      </td>
+    </tr>
+    <!-- Module 18 - 1 Col Speaker End -->"""
+
+  'Module 19 - 2 Col Speaker':
+    'prefix': 'module19email'
+    'body': """
+    <!-- Module 19 - 2 Col Speaker -->
+      <tr> <!-- 2 column row Table Row -->
+        <td bgcolor="#ffffff" align="center" style="padding: 0 40px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;"> <!-- Nested table for 2 column row. Specifies a max width of 560 pixels. -->
+              <tr> <!-- nested 2 column row Table Row -->
+                <td align="center" valign="top" style="font-size:0; padding-bottom: 25px;"> <!-- Nested 2 column row table cell this cell contains content for this block. MSO code below specifies a width of 560 for the row and 260 for the individual cells in outlook. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+                  <tr>
+                  <td align="left" valign="top" width="260">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:50%; min-width:260px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the first column. -->
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:260px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-175.png" width="175" height="175" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              <strong>First Last</strong><br>
+                              Company<br>
+                              <i>Position</i>
+                              <br><br>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="20" style="font-size: 1px;">&nbsp;</td>
+                  <td align="right" valign="top" width="260">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:50%; min-width:260px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the second column. -->
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:260px; float: right;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-175.png" width="175" height="175" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              <strong>First Last</strong><br>
+                              Company<br>
+                              <i>Position</i>
+                              <br><br>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- Module 19 - 2 Col Speaker End -->"""
+
+  'Module 20 - 3 Col Speaker':
+    'prefix': 'module20email'
+    'body': """
+    <!-- Module 20 - 3 Col Speaker -->
+      <tr> <!-- Table row -->
+        <td align="center" bgcolor="#ffffff" style="padding: 0 70px 10px 70px;"> <!-- Table cell -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;"> <!-- Nested table for 3 column row. Specifies a max width of 560 pixels. -->
+              <tr> <!-- Nested table row -->
+                <td align="center" valign="top" style="font-size:0;"> <!-- Nested table cell -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+                  <tr>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:30%; min-width:130px; vertical-align:top; width:100%; margin: 0;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the First column. -->
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:170px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-125.png" width="125" height="125" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              <strong>First Last</strong><br>
+                              Company<br>
+                              <i>Position</i>
+                              <br><br>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="15" style="font-size: 1px;">&nbsp;</td>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:30%; min-width:170px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the Second column. -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:173px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-125.png" width="125" height="125" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              <strong>First Last</strong><br>
+                              Company<br>
+                              <i>Position</i>
+                              <br><br>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="15" style="font-size: 1px;">&nbsp;</td>
+                  <td align="left" valign="top" width="170">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:30%; min-width:130px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the Third column. -->
+                      <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:170px; float: right;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 170px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr> <!-- Nested table row -->
+                          <td align="center" valign="top" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; padding-top: 25px;"> <!-- Nested table cell -->
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/speaker_placeholder-125.png" width="125" height="125" border="0" style="display: block;" alt="Speaker Placeholder"> <!-- replace image and alt tag here -->
+                            <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 22px;">
+                              <strong>First Last</strong><br>
+                              Company<br>
+                              <i>Position</i>
+                              <br><br>
+                            </p> <!-- Replace body copy of roughly 14 words or 5 lines of text, link copy, and the link here -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- Module 20 - 3 Col Speaker End -->"""
+
+  'Module 21 - Webinar Horizontal Rule':
+    'prefix': 'module21email'
+    'body': """
+    <!-- Module 21 - Webinar Horizontal Rule -->
+    <tr>
+      <td bgcolor="#ffffff" align="center" style="padding: 0px 30px 20px 30px;"> <!-- Copy Table Cell -->
+        <hr style="width: 300px; border: solid 2px #00A7CF; border-radius: 2px;">
+      </td>
+    </tr>
+    <!-- Module 21 - Webinar Horizontal Rule End -->"""
+
+  'Module 22 - Webinar Horizontal Rule':
+    'prefix': 'module22email'
+    'body': """
+    <!-- Module 22 - Webinar Description -->
+      <tr> <!-- Copy Table Row -->
+        <td bgcolor="#ffffff" align="center" style="padding: 20px 70px 40px 70px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"> <!-- Copy Table Cell -->
+          <p style="margin: 0;"> A lot of people are lying to you about AV-over-IP. It's not easy. It's not lossless compression. And it's not going to happen overnight. But it IS the future of AV signal distribution. There is currently NO adopted standard for sending AV signals (video, audio, control and power) over the network — there are multiple ways of doing it, and none of the options are interoperable. So, buyer and adopter, beware. This webinar will take you on a journey through the plethora of signal routing options via an IP network and explain how each one works. We'll talk what's good about each, what's bad about each and, most of all, how likely it is that AV-over-IP experiences industry-wide adoption. AV-over-IP affects not only the future of signal routing but also control. So this means everything you design for will change — meeting rooms, classrooms, boardrooms, churches, digital signage networks, museums, auditoriums, live events. Everything. Don't switch your company over to AV-over-IP without attending this webinar from rAVe's founder, Gary Kayye. You will leave understanding every option out there — including what works and what's pure hype — and how to evaluate the trade-offs for each. Sponsored by Barco, this webinar is approved for 1.5 CTS, CTS-I and CTS-D RUs.
+          </p> <!-- Insert Copy Here -->
+        </td>
+      </tr>
+    <!-- Module 22 - Webinar Description End -->"""
+
+  'Module 23 - Webinar Horizontal Rule':
+    'prefix': 'module23email'
+    'body': """
+    <!-- Module 23 - Webinar Register Button -->
+    <tr>
+      <td bgcolor="#ffffff" align="center" style="padding: 20px 0 70px 0; border-radius: 0px 0px 4px 4px;">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" style="border-radius: 10px;" bgcolor="#00A7CF">
+              <a href="http://litmus.com" target="_blank" style="font-size: 18px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 28px; background-color: #00A7CF; padding: 16px 28px; border: 1px solid #00A7CF; display: block;">Register Now &#187;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- Module 23 - Webinar Register Button End-->"""
+
+  'Module 24 - Upcoming Webinar Module':
+    'prefix': 'module24email'
+    'body': """
+    <!-- Module 24 - Upcoming Webinar Module -->
+    <tr>
+      <td bgcolor="transparent" align="center" style="padding: 30px 30px 8px 30px">  <!-- nested table cell -->
+        <h2 align="left" style="color: #000000; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 27px; font-weight: 400; line-height: 25px;">Upcoming Webinars</h2> <!-- replace header here -->
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" bgcolor="#c1dde8" style="padding: 30px 30px 30px 30px; border-radius: 4px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">  <!-- nested table cell -->
+        <table>
+          <!-- Insert Upcoming Webinar List Modules Here -->
+
+          <!-- Insert Upcoming Webinar List Modules Here -->
+        </table>
+      </td>
+    </tr>
+    <!-- Module 24 - Upcoming Webinar Module End -->"""
+
+  'Module 25 - Upcoming Webinar Module':
+    'prefix': 'module25email'
+    'body': """
+    <!-- Module 25 - Upcoming Webinar List Modules -->
+      <tr> <!-- 2 column row Table Row -->
+        <td align="center" style="padding: 20px 20px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="500">
+          <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;"> <!-- Nested table for 2 column row. Specifies a max width of 560 pixels. -->
+              <tr> <!-- nested 2 column row Table Row -->
+                <td bgcolor="#ffffff" align="center" valign="top" style="font-size:0; border-radius: 4px;"> <!-- Nested 2 column row table cell this cell contains content for this block. MSO code below specifies a width of 560 for the row and 260 for the individual cells in outlook. -->
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+                  <tr>
+                  <td align="left" valign="top" width="125">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:25%; min-width: 100px; vertical-align:top;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the first column. -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500px;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr>
+                          <!-- Calender Image -->
+                          <td align="center" cellpadding="10" style="padding: 50px 40px 0px 40px;">
+                            <img src="http://www.almoproav.net/campaigns/template/2019/assets/cal-temp3.png" width="58" height="58" alt="Dec 20th"></img>
+                          </td>
+                          <!-- Calender Image End -->
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="20" style="font-size: 1px;">&nbsp;</td>
+                  <td align="right" valign="top" width="375">
+                  <![endif]-->
+                    <div style="display:inline-block; max-width:75%; min-width: 20px; vertical-align:top; width:100%;" class="mobile-wrapper"> <!-- This div has a specified max and min width to properly size the second column. -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500px; float: right;" class="max-width"> <!-- Nested table specifies a width of 100%, a max width of 260px, but the class also specifies a max-width of 100% inorder for the table to size to the width of the div it is contained in. -->
+                        <tr>
+                          <!-- Upcoming Webinar Link -->
+                          <td align="left" width="500px" style="padding: 20px 20px;" class="title-mobile-padding">
+                            <a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">
+                              <h2 style="margin: 7px 0px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 400; line-height: 24px;">Measuring up with Labor Services</h2>
+                              <h3 style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 16px;">Join us for an overview of our labor services offerings.</h3>
+                              <p style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17px;"><i>Speakers: First Last of Company Name</i></p>
+                              <p style="margin: 7px 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17px;">1.5 CTS, CTS-I and CTS-D RU</p>
+                            </a>
+                          </td>
+                          <!-- Upcoming Webinar Link End -->
+                        </tr>
+                      </table>
+                    </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- Module 25 - Upcoming Webinar List Modules End -->"""
+
+  'Module 26 - Outlined Button Section':
+    'prefix': 'module26email'
+    'body': """
+    <!-- Outlined Button Section -->
+     <tr> <!-- nested table row 2 -->
+       <td align="center" style="padding: 25px 0 25px 0;"> <!-- nested table cell that centers the text -->
+         <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #00A7CF; text-decoration: none; background-color: transparent; border: 2px solid #00A7CF; border-bottom: 2px solid #00A7CF; border-left: 2px solid #00A7CF; border-right: 2px solid #00A7CF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+       </td>
+     </tr>
+    <!-- Outlined Button Section END -->"""
+
+  'Module 27 - Text Link':
+    'prefix': 'module27email'
+    'body': """
+    <!-- Module 27 - Text Link -->
+      <p style="color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><a href="http://almoproav.com" target="_blank" style="color: #00A7CF; text-decoration: none;">Experience the new dashboard &#187;</a></p>
+    <!-- Module 27 - Text Link END -->"""
+
+  'Module 28 - 2 Column Row Reversed Break':
+    'prefix': 'module28email'
+    'body': """
+    <!-- Module 28 - 2 COLUMN ROW REVERSED BREAK -->
+      <tr> <!-- 2 column row Table Row -->
+        <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px 0px 20px 0px"> <!-- 2 column row Table cell. MSO code below specifies a width of 560 for this section in outlook. -->
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+          <tr>
+          <td align="center" valign="top" width="560">
+          <![endif]-->
+            <table dir="rtl" width="100%">
+              <tr>
+                <td width="50%" dir="ltr" align="center" class="full-2col">
+                  <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+                    <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Right Column</h3> <!-- replace header here -->
+                  <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                    Right Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                    <br><br>
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                  </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
+                </td>
+                <td width="50%" dir="ltr" align="center" class="full-2col">
+                  <img src="https://via.placeholder.com/260x180.png" width="260" height="180" border="0" alt="Insert alt text here" style="display: block; border: 0px; color: #999999; font-family: sans-serif; font-size: 18px;" class="img-max"> <!-- replace image and alt tag here -->
+                    <h3 style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;">Left Column</h3> <!-- replace header here -->
+                  <p style="max-width:260px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                    Left Side: Mandeville carneiro robbins goas ross kelly ragan rodriguez stig jordan hodgekiss merlin yeaman
+                    <br><br>
+                    <a href="http://almoproav.com" target="_blank" style="text-decoration: none; color: #00A7CF;">Read more &#187;</a>
+                  </p> <!-- Replace body copy of roughly 14 words or 4 lines of text, link copy, and the link here -->
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    <!-- END 2 COLUMN ROW REVERSE BREAK  -->"""

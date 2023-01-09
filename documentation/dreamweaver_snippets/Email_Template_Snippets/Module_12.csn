@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><snippet name="Module 12" description="Module 12 - Call To Action" type="block"><insertText location="beforeSelection"><![CDATA[<!-- Module 12 - CALL TO ACTION - MUST PLACE AFTER END CONTENT BLOCK COMMENT -->
+  <tr> <!-- Table Row. This call to action must be placed after the main content block. When placed inside it will cause all items above it to be pushed off center in some email rendering programs such as outlook. -->
+    <td align="center" style="padding: 0px 10px 0px 10px; background-color: #f5f5f5;"> <!-- Table cell -->
+      <!--[if (gte mso 9)|(IE)]>
+      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+      <tr>
+      <td align="center" valign="top" width="600">
+      <![endif]-->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- nested table -->
+          <tr> <!-- nested table row -->
+            <td bgcolor="#00A7CF" align="center" style="padding: 30px 30px 30px 30px; border-radius: 0px 0px 4px 4px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">  <!-- nested table cell -->
+              <h2 style="font-size: 22px; font-weight: 400; color: #ffffff; margin: 0 0 20px 0;">Want to learn more?</h2> <!-- replace header here -->
+               <table border="0" cellspacing="0" cellpadding="0" class="responsive-table"> <!-- nested table 2 -->
+                <tr> <!-- nested table row 2 -->
+                  <td align="center"> <!-- nested table cell that centers the text -->
+                    <a href="https://almoproav.com/" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #00A7CF; border: 2px solid #ffffff; border-bottom: 2px solid #ffffff; border-left: 2px solid #ffffff; border-right: 2px solid #ffffff; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; padding: 10px 20px;">CTA Button</a>
+                    <!-- Replace link button copy and link here. -->
+                  </td>
+                </tr>
+               </table>
+            </td>
+          </tr>
+        </table>
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+<!-- END CALL TO ACTION -->]]></insertText><insertText location="afterSelection"><![CDATA[]]></insertText></snippet>
